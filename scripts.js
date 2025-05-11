@@ -44,11 +44,16 @@ for (let i = 0; i < 3; i++) {
 
 console.log("All tasks: ", tasks);
 
-// Filter and display only completed tasks
-const completedTasks = tasks.filter((task) => task.status === "done");
+// Function to filter and display only completed tasks
+function displayCompletedTasks() {
+  const completedTasks = tasks.filter((task) => task.status === "done");
 
-if (completedTasks.length > 0) {
-  console.log("Completed Tasks:", completedTasks);
-} else {
-  console.log("No tasks completed, let's get to work!");
+  if (completedTasks.length > 0) {
+    console.log("Completed Tasks:", completedTasks);
+  } else {
+    console.log("No tasks completed, let's get to work!");
+  }
 }
+
+//Invoke or call display completed task function
+displayCompletedTasks();
